@@ -258,7 +258,13 @@ namespace FichasHonesko
                 Random randNum = new Random();
                 for (int i = 0; i <= 6; i++)
                 {
-                    cod += randNum.Next(9);
+                    if (i == 0)
+                    {
+                        cod += (randNum.Next(8) + 1);
+                    } else
+                    {
+                        cod += randNum.Next(9);
+                    }
                 }
 
                 while (DalHelper.codigoExiste(cod))
@@ -266,7 +272,14 @@ namespace FichasHonesko
                     cod = "";
                     for (int i = 0; i <= 6; i++)
                     {
-                        cod += randNum.Next(9);
+                        if (i == 0)
+                        {
+                            cod += (randNum.Next(8) + 1);
+                        }
+                        else
+                        {
+                            cod += randNum.Next(9);
+                        }
                     }
                 }
 
