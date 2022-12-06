@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>FichasHonesko</id>
+    <version>1.0.0</version>
+    <authors>FichasHonesko</authors>
+    <description>Package Description</description>
+    <dependencies>
+      <group targetFramework="net6.0-windows7.0">
+        <dependency id="System.Data.SQLite" version="1.0.117" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+    <frameworkReferences>
+      <group targetFramework="net6.0-windows7.0">
+        <frameworkReference name="Microsoft.WindowsDesktop.App.WindowsForms" />
+      </group>
+    </frameworkReferences>
+    <contentFiles>
+      <files include="any/net6.0-windows7.0/honesko.ico" buildAction="Content" />
+    </contentFiles>
+  </metadata>
+  <files>
+    <file src="E:\Sistemas\FichasHonesko\FichasHonesko\bin\Release\net6.0-windows\FichasHonesko.runtimeconfig.json" target="lib\net6.0-windows7.0\FichasHonesko.runtimeconfig.json" />
+    <file src="E:\Sistemas\FichasHonesko\FichasHonesko\bin\Release\net6.0-windows\FichasHonesko.dll" target="lib\net6.0-windows7.0\FichasHonesko.dll" />
+    <file src="E:\Sistemas\FichasHonesko\FichasHonesko\honesko.ico" target="content\honesko.ico" />
+    <file src="E:\Sistemas\FichasHonesko\FichasHonesko\honesko.ico" target="contentFiles\any\net6.0-windows7.0\honesko.ico" />
+  </files>
+</package>

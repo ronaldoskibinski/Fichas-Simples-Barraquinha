@@ -83,15 +83,12 @@ namespace FichasHonesko
                     int qtd = 0;
                     using (var cmd = DbConnection().CreateCommand())
                     {
-                        cmd.CommandText = "SELECT * FROM Fichas Where Cod=";
+                        cmd.CommandText = "SELECT COUNT(id) as qtd FROM Fichas";
                         using var get = new SQLiteCommand(cmd.CommandText, DbConnection());
                         using SQLiteDataReader rdr = get.ExecuteReader();
-                        string[] data = new string[3];
                         while (rdr.Read())
                         {
-                            data[0] = rdr.GetString(1);
-                            data[1] = rdr.GetString(2);
-                            data[2] = rdr.GetString(3);
+                            qtd = rdr.GetInt32(0);
                         }
                         return qtd;
                     }
@@ -332,6 +329,8 @@ namespace FichasHonesko
         {
             string impressora = DalHelper.GetImpressora();
             impressoraComboBox.SelectedIndex = impressoraComboBox.FindStringExact(impressora);
+            counter = DalHelper.GetQtdFicha();
+            counterText.Text = DalHelper.GetQtdFicha().ToString();
         }
 
         private void impressoraComboBox_SelectedValueChanged(object sender, EventArgs e)
