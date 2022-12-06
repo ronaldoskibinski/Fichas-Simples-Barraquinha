@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.btnCostela = new System.Windows.Forms.Button();
             this.btnBrat = new System.Windows.Forms.Button();
             this.btnCarne = new System.Windows.Forms.Button();
@@ -40,20 +41,15 @@
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.printPreviewControl1 = new System.Windows.Forms.PrintPreviewControl();
-            this.label4 = new System.Windows.Forms.Label();
-            this.btnImpress = new System.Windows.Forms.Button();
             this.pageSetupDialog1 = new System.Windows.Forms.PageSetupDialog();
             this.impressoraComboBox = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.counterText = new System.Windows.Forms.Label();
             this.flowLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnCostela
@@ -82,6 +78,7 @@
             this.btnBrat.TabIndex = 1;
             this.btnBrat.Text = "Pastel Bratwurst";
             this.btnBrat.UseVisualStyleBackColor = false;
+            this.btnBrat.Click += new System.EventHandler(this.btnClick);
             // 
             // btnCarne
             // 
@@ -95,6 +92,7 @@
             this.btnCarne.TabIndex = 3;
             this.btnCarne.Text = "Pastel de Carne";
             this.btnCarne.UseVisualStyleBackColor = false;
+            this.btnCarne.Click += new System.EventHandler(this.btnClick);
             // 
             // flowLayoutPanel1
             // 
@@ -119,6 +117,7 @@
             this.btnFrango.TabIndex = 4;
             this.btnFrango.Text = "Pastel de Frango";
             this.btnFrango.UseVisualStyleBackColor = false;
+            this.btnFrango.Click += new System.EventHandler(this.btnClick);
             // 
             // label1
             // 
@@ -165,7 +164,7 @@
             this.btnBanana.TabIndex = 0;
             this.btnBanana.Text = "Pastel de Banana";
             this.btnBanana.UseVisualStyleBackColor = false;
-            this.btnBanana.Click += new System.EventHandler(this.button2_Click);
+            this.btnBanana.Click += new System.EventHandler(this.btnClick);
             // 
             // label3
             // 
@@ -181,10 +180,10 @@
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Image = global::FichasHonesko.Properties.Resources.back;
-            this.pictureBox2.Location = new System.Drawing.Point(391, 262);
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(391, 124);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(451, 230);
+            this.pictureBox2.Size = new System.Drawing.Size(531, 368);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 10;
             this.pictureBox2.TabStop = false;
@@ -196,55 +195,12 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(43)))), ((int)(((byte)(73)))));
             this.pictureBox1.Image = global::FichasHonesko.Properties.Resources.honesko;
-            this.pictureBox1.Location = new System.Drawing.Point(681, 345);
+            this.pictureBox1.Location = new System.Drawing.Point(648, 315);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(120, 105);
+            this.pictureBox1.Size = new System.Drawing.Size(153, 135);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.Transparent;
-            this.panel1.Controls.Add(this.printPreviewControl1);
-            this.panel1.Location = new System.Drawing.Point(419, 174);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(339, 143);
-            this.panel1.TabIndex = 11;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
-            // 
-            // printPreviewControl1
-            // 
-            this.printPreviewControl1.Location = new System.Drawing.Point(0, 0);
-            this.printPreviewControl1.Name = "printPreviewControl1";
-            this.printPreviewControl1.Size = new System.Drawing.Size(339, 143);
-            this.printPreviewControl1.TabIndex = 1;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label4.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label4.Location = new System.Drawing.Point(416, 148);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(106, 21);
-            this.label4.TabIndex = 12;
-            this.label4.Text = "Visualização";
-            // 
-            // btnImpress
-            // 
-            this.btnImpress.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.btnImpress.FlatAppearance.BorderColor = System.Drawing.Color.Firebrick;
-            this.btnImpress.FlatAppearance.BorderSize = 0;
-            this.btnImpress.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnImpress.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnImpress.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnImpress.Location = new System.Drawing.Point(418, 324);
-            this.btnImpress.Name = "btnImpress";
-            this.btnImpress.Size = new System.Drawing.Size(151, 44);
-            this.btnImpress.TabIndex = 13;
-            this.btnImpress.Text = "Imprimir";
-            this.btnImpress.UseVisualStyleBackColor = false;
             // 
             // impressoraComboBox
             // 
@@ -276,30 +232,27 @@
             this.label6.TabIndex = 16;
             this.label6.Text = "Fichas Impressas";
             // 
-            // label7
+            // counterText
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label7.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label7.Location = new System.Drawing.Point(41, 404);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(19, 21);
-            this.label7.TabIndex = 17;
-            this.label7.Text = "0";
+            this.counterText.AutoSize = true;
+            this.counterText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.counterText.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.counterText.Location = new System.Drawing.Point(41, 404);
+            this.counterText.Name = "counterText";
+            this.counterText.Size = new System.Drawing.Size(19, 21);
+            this.counterText.TabIndex = 17;
+            this.counterText.Text = "0";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label7);
+            this.Controls.Add(this.counterText);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.impressoraComboBox);
-            this.Controls.Add(this.btnImpress);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
@@ -313,11 +266,11 @@
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Impressão de Fichas Honesko";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -337,14 +290,10 @@
         private Label label3;
         private PictureBox pictureBox2;
         private PictureBox pictureBox1;
-        private Panel panel1;
-        private Label label4;
-        private Button btnImpress;
-        private PrintPreviewControl printPreviewControl1;
         private PageSetupDialog pageSetupDialog1;
         private ComboBox impressoraComboBox;
         private Label label5;
         private Label label6;
-        private Label label7;
+        private Label counterText;
     }
 }
