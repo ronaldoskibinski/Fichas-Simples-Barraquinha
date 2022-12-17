@@ -248,7 +248,7 @@ namespace FichasHonesko
         void printDocument_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
             var printDocument = sender as System.Drawing.Printing.PrintDocument;
-            int offset = 139;
+            int offset = 159;
             counter++;
             counterText.Text = counter.ToString();
             if (printDocument != null)
@@ -287,31 +287,36 @@ namespace FichasHonesko
                 using (var minFont = new Font("Times New Roman", 12))
                 using (var brush = new SolidBrush(Color.Black))
                 {
-                    e.Graphics.DrawLine(Pens.Black, 5, 5, 310, 5);
+                    e.Graphics.DrawLine(Pens.Black, 0, 5, 310, 5);
                     e.Graphics.DrawString(
                         textoDoPastel,
                         font,
                         brush,
-                        new RectangleF(5, 20, printDocument.DefaultPageSettings.PrintableArea.Width, printDocument.DefaultPageSettings.PrintableArea.Height));
+                        new RectangleF(0, 20, printDocument.DefaultPageSettings.PrintableArea.Width, printDocument.DefaultPageSettings.PrintableArea.Height));
                     e.Graphics.DrawString(
                         "Data:" + data,
                         font,
                         brush,
-                        new RectangleF(5, 50, printDocument.DefaultPageSettings.PrintableArea.Width, printDocument.DefaultPageSettings.PrintableArea.Height));
+                        new RectangleF(0, 50, printDocument.DefaultPageSettings.PrintableArea.Width, printDocument.DefaultPageSettings.PrintableArea.Height));
                     e.Graphics.DrawString(
-                        "Honesko Massas - Pedido n: " + counter,
+                        "Honesko Massas",
                         minFont,
                         brush,
-                        new RectangleF(7, 84, printDocument.DefaultPageSettings.PrintableArea.Width, printDocument.DefaultPageSettings.PrintableArea.Height));
+                        new RectangleF(2, 84, printDocument.DefaultPageSettings.PrintableArea.Width, printDocument.DefaultPageSettings.PrintableArea.Height));
+                    e.Graphics.DrawString(
+                        "Pedido n: " + counter,
+                        minFont,
+                        brush,
+                        new RectangleF(2, 104, printDocument.DefaultPageSettings.PrintableArea.Width, printDocument.DefaultPageSettings.PrintableArea.Height));
                     e.Graphics.DrawString(
                         "Código: " + cod,
                         minFont,
                         brush,
-                        new RectangleF(7, 104, printDocument.DefaultPageSettings.PrintableArea.Width, printDocument.DefaultPageSettings.PrintableArea.Height));
+                        new RectangleF(2, 124, printDocument.DefaultPageSettings.PrintableArea.Width, printDocument.DefaultPageSettings.PrintableArea.Height));
 
-                    e.Graphics.DrawLine(Pens.Black, 5, offset, 310, offset);
+                    e.Graphics.DrawLine(Pens.Black, 0, offset, 310, offset);
                     Image i = Image.FromFile(@"honesko.png");
-                    e.Graphics.DrawImage(i, 260, 88, 50, 48);
+                    e.Graphics.DrawImage(i, 215, 88, 50, 48);
                 }
                 DalHelper.Add(textoDoPastel, cod, data.ToString());
             }
