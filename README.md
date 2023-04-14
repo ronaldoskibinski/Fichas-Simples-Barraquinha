@@ -13,8 +13,12 @@ Abrir a pasta **\bin\Debug\net6.0-windows** onde se encontra a build demonstraç
 > **A aplicação** Também conta com um sistema de verificação de código. Cada ficha é impressa com um código de verificação, o qual pode ser usado no sistema
 para verificar a veracidade da ficha. <br />
 
-## Linguagem utilizada
+## Linguagem utilizada e Tecnologias
 - [x] C#.
 - [x] Windows Forms.
+- [x] SQLite.
 
 ## Designs e logos feitos por mim.
+
+## Imagens:
+![image](https://user-images.githubusercontent.com/23247714/232126535-9d671595-fc21-4929-9a86-e570a2377345.png)
